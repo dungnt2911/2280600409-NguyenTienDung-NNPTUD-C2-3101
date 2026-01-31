@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#loading {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.search-container {
+    margin: 20px 0;
+}
+
+.search-container label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search-container input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #333;
+    width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+.sort-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 2px 8px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.sort-btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+td img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+/* Dòng xen kẽ: dòng lẻ màu trắng, dòng chẵn màu đen */
+tbody tr:nth-child(odd) {
+    background-color: white;
+    color: black;
+}
+
+tbody tr:nth-child(even) {
+    background-color: black;
+    color: white;
+}
+
+.search-container select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #333;
+    margin-left: 20px;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+    margin: 0 10px;
+}
+
+.pagination button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-weight: bold;
+}
+
+/* Ẩn nội dung description, chỉ hiển thị khi hover */
+.description-cell {
+    position: relative;
+    max-width: 200px;
+}
+
+.description-text {
+    display: none;
+}
+
+.description-cell::before {
+    content: "[Di chuột để xem]";
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.description-cell:hover::before {
+    display: none;
+}
+
+.description-cell:hover .description-text {
+    display: block;
+}

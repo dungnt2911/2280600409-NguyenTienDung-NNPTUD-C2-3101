@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Products</title>
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Dashboard - Quản lý sản phẩm</h1>
+
+    <div id="loading">Đang tải dữ liệu...</div>
+
+    <div class="search-container">
+        <label for="searchInput">Tìm kiếm:</label>
+        <input type="text" id="searchInput" placeholder="Nhập tiêu đề sản phẩm...">
+
+        <label for="itemsPerPage">Hiển thị:</label>
+        <select id="itemsPerPage">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+        </select>
+        <span>mỗi trang</span>
+    </div>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Hình ảnh</th>
+                <th>Tiêu đề <button class="sort-btn" id="sortTitle">⇅</button></th>
+                <th>Giá <button class="sort-btn" id="sortPrice">⇅</button></th>
+                <th>Mô tả</th>
+                <th>Danh mục</th>
+            </tr>
+        </thead>
+        <tbody id="productBody">
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button id="prevBtn">« Trước</button>
+        <span id="pageInfo">Trang 1 / 1</span>
+        <button id="nextBtn">Sau »</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
